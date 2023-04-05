@@ -1,5 +1,5 @@
 {
-  "id" : "358d113e-c18a-49b3-a3a7-d52bef2732c6",
+  "id" : "74cb9503-ce7d-4bca-bb8f-77642fce5141",
   "request" : {
     "url" : "/fraudcheck",
     "method" : "PUT",
@@ -22,5 +22,5 @@
     },
     "transformers" : [ "response-template", "spring-cloud-contract" ]
   },
-  "uuid" : "358d113e-c18a-49b3-a3a7-d52bef2732c6"
+  "uuid" : "74cb9503-ce7d-4bca-bb8f-77642fce5141"
 }
