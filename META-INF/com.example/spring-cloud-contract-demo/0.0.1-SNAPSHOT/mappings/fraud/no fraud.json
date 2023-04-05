@@ -1,5 +1,5 @@
 {
-  "id" : "06c6c30e-6bd7-4ec8-802a-678a6c7cff25",
+  "id" : "e3bc7097-5978-43a6-861e-5ac088dd2a95",
   "request" : {
     "url" : "/fraudcheck",
     "method" : "PUT",
@@ -11,16 +11,16 @@
     "bodyPatterns" : [ {
       "matchesJsonPath" : "$[?(@.['client.id'] =~ /[0-9]{10}/)]"
     }, {
-      "matchesJsonPath" : "$[?(@.['loanAmount'] =~ /[1-9][0-9]{3}/)]"
+      "matchesJsonPath" : "$[?(@.['loanAmount'] == 10000)]"
     } ]
   },
   "response" : {
     "status" : 200,
-    "body" : "{\"fraudCheckStatus\":\"OK\",\"rejection.reason\":\"\"}",
+    "body" : "{\"fraudCheckStatus\":\"OK\",\"rejection.reason\":\"\",\"id\":-1210402846}",
     "headers" : {
       "Content-Type" : "application/json"
     },
     "transformers" : [ "response-template", "spring-cloud-contract" ]
   },
-  "uuid" : "06c6c30e-6bd7-4ec8-802a-678a6c7cff25"
+  "uuid" : "e3bc7097-5978-43a6-861e-5ac088dd2a95"
 }

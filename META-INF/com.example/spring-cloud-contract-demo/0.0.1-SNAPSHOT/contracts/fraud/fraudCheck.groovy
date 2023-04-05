@@ -34,7 +34,7 @@ import org.springframework.cloud.contract.spec.Contract
                 url '/fraudcheck'
                 body([
                         "client.id": $(regex('[0-9]{10}')),
-                        loanAmount : $(~/[1-9][0-9]{3}/)
+                        loanAmount : 10000
                 ])
                 headers {
                     contentType('application/json')
@@ -44,7 +44,8 @@ import org.springframework.cloud.contract.spec.Contract
                 status OK()
                 body([
                         fraudCheckStatus  : "OK",
-                        "rejection.reason": ""
+                        "rejection.reason": "",
+                        "id": anyNumber()
                 ])
                 headers {
                     contentType('application/json')
