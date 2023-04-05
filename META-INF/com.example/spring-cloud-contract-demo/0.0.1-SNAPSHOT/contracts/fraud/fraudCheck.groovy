@@ -44,8 +44,7 @@ import org.springframework.cloud.contract.spec.Contract
                 status OK()
                 body([
                         fraudCheckStatus  : "OK",
-                        "rejection.reason": "",
-                        "id": anyNumber()
+                        "rejection.reason": ""
                 ])
                 headers {
                     contentType('application/json')

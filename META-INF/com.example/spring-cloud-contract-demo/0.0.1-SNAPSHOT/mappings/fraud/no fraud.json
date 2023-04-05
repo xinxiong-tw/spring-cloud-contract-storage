@@ -1,5 +1,5 @@
 {
-  "id" : "e3bc7097-5978-43a6-861e-5ac088dd2a95",
+  "id" : "8121a771-892f-4afb-a109-982ff19456b1",
   "request" : {
     "url" : "/fraudcheck",
     "method" : "PUT",
@@ -16,11 +16,11 @@
   },
   "response" : {
     "status" : 200,
-    "body" : "{\"fraudCheckStatus\":\"OK\",\"rejection.reason\":\"\",\"id\":-1210402846}",
+    "body" : "{\"fraudCheckStatus\":\"OK\",\"rejection.reason\":\"\"}",
     "headers" : {
       "Content-Type" : "application/json"
     },
     "transformers" : [ "response-template", "spring-cloud-contract" ]
   },
-  "uuid" : "e3bc7097-5978-43a6-861e-5ac088dd2a95"
+  "uuid" : "8121a771-892f-4afb-a109-982ff19456b1"
 }
