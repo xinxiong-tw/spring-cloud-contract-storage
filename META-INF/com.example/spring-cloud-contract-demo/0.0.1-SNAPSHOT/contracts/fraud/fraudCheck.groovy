@@ -10,7 +10,7 @@ import org.springframework.cloud.contract.spec.Contract
                 url '/fraudcheck'
                 body([
                         "client.id": $(regex('[0-9]{10}')),
-                        loanAmount : anyNumber()
+                        loanAmount : 99999
                 ])
                 headers {
                     contentType('application/json')
