@@ -1,5 +1,5 @@
 {
-  "id" : "b92cbc86-250a-48cc-a45d-6cbf765d93be",
+  "id" : "79e730b8-f2bb-48d0-9c92-36ce8fc7e0ab",
   "request" : {
     "url" : "/fraudcheck",
     "method" : "PUT",
@@ -11,7 +11,7 @@
     "bodyPatterns" : [ {
       "matchesJsonPath" : "$[?(@.['client.id'] =~ /[0-9]{10}/)]"
     }, {
-      "matchesJsonPath" : "$[?(@.['loanAmount'] == 99999)]"
+      "matchesJsonPath" : "$[?(@.['loanAmount'] =~ /-?(\\d*\\.\\d+|\\d+)/)]"
     } ]
   },
   "response" : {
@@ -22,5 +22,5 @@
     },
     "transformers" : [ "response-template", "spring-cloud-contract" ]
   },
-  "uuid" : "b92cbc86-250a-48cc-a45d-6cbf765d93be"
+  "uuid" : "79e730b8-f2bb-48d0-9c92-36ce8fc7e0ab"
 }
