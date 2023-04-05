@@ -1,0 +1,26 @@
+{
+  "id" : "a8f3af74-d9b1-425b-b7a6-cb4c72cc8293",
+  "request" : {
+    "url" : "/fraudcheck",
+    "method" : "PUT",
+    "headers" : {
+      "Content-Type" : {
+        "matches" : "application/json.*"
+      }
+    },
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : "$[?(@.['client.id'] =~ /[0-9]{10}/)]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['loanAmount'] == 10000)]"
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"fraudCheckStatus\":\"OK\",\"rejection.reason\":\"\"}",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template", "spring-cloud-contract" ]
+  },
+  "uuid" : "a8f3af74-d9b1-425b-b7a6-cb4c72cc8293"
+}
