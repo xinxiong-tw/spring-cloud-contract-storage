@@ -4,6 +4,17 @@ import org.springframework.cloud.contract.spec.Contract
 
 [
         Contract.make {
+            name("get fraud")
+            request {
+                method 'GET'
+                url '/fraudcheck'
+            }
+            response {
+                status OK()
+                body "Hello"
+            }
+        },
+        Contract.make {
             name("fraud")
             request {
                 method 'PUT'
