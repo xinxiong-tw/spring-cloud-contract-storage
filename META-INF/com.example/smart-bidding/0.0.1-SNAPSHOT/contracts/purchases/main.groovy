@@ -4,6 +4,7 @@ import org.springframework.cloud.contract.spec.Contract
 
 [
         Contract.make {
+            name("purchases success")
             request {
                 method(POST())
                 url("/purchases")
@@ -11,7 +12,7 @@ import org.springframework.cloud.contract.spec.Contract
                     contentType(applicationJson())
                 }
                 body([
-                        bidderId: 1,
+                        bidderId        : 1,
                         requestPackageId: 1
                 ])
             }
@@ -21,16 +22,16 @@ import org.springframework.cloud.contract.spec.Contract
                     contentType(applicationJson())
                 }
                 body([
-                        code: 200,
+                        code   : 200,
                         message: "Success",
-                        body: [
-                                id: 100,
-                                bidder: [
-                                        id: 1,
+                        body   : [
+                                id            : 100,
+                                bidder        : [
+                                        id  : 1,
                                         name: "bidder name"
                                 ],
                                 requestPackage: [
-                                        id: 1,
+                                        id     : 1,
                                         content: "package content"
                                 ]
                         ]
@@ -38,6 +39,7 @@ import org.springframework.cloud.contract.spec.Contract
             }
         },
         Contract.make {
+            name("requested package not found")
             request {
                 method(POST())
                 url("/purchases")
