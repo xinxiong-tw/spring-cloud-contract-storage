@@ -1,0 +1,26 @@
+{
+  "id" : "9ba60758-41a2-4179-a637-a0a3214150b5",
+  "request" : {
+    "url" : "/purchases",
+    "method" : "POST",
+    "headers" : {
+      "Content-Type" : {
+        "matches" : "application/json.*"
+      }
+    },
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : "$[?(@.['bidderId'] == 1)]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['requestPackageId'] == 1)]"
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"code\":200,\"message\":\"Success\",\"body\":{\"id\":100,\"bidder\":{\"id\":1,\"name\":\"bidder name\"},\"requestPackage\":{\"id\":1,\"content\":\"package content\"}}}",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template", "spring-cloud-contract" ]
+  },
+  "uuid" : "9ba60758-41a2-4179-a637-a0a3214150b5"
+}

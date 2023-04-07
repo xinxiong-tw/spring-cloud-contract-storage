@@ -1,0 +1,26 @@
+{
+  "id" : "08bafd12-76d8-4fda-91c7-9af61b7a71e2",
+  "request" : {
+    "url" : "/purchases",
+    "method" : "POST",
+    "headers" : {
+      "Content-Type" : {
+        "matches" : "application/json.*"
+      }
+    },
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : "$[?(@.['bidderId'] == 1)]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['requestPackageId'] == 111)]"
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"code\":404,\"message\":\"not found\"}",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template", "spring-cloud-contract" ]
+  },
+  "uuid" : "08bafd12-76d8-4fda-91c7-9af61b7a71e2"
+}

@@ -36,5 +36,28 @@ import org.springframework.cloud.contract.spec.Contract
                         ]
                 ])
             }
+        },
+        Contract.make {
+            request {
+                method(POST())
+                url("/purchases")
+                headers {
+                    contentType(applicationJson())
+                }
+                body([
+                        bidderId: 1,
+                        requestPackageId: 111
+                ])
+            }
+            response {
+                status(OK())
+                headers {
+                    contentType(applicationJson())
+                }
+                body([
+                        code: 404,
+                        message: "not found"
+                ])
+            }
         }
 ]
