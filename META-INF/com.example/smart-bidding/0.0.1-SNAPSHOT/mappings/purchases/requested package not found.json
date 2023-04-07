@@ -1,5 +1,5 @@
 {
-  "id" : "0981dcec-e9d3-438f-840d-91d4d845c4e9",
+  "id" : "419fa1fc-38de-4952-b972-52038542ad9c",
   "request" : {
     "url" : "/purchases",
     "method" : "POST",
@@ -15,12 +15,8 @@
     } ]
   },
   "response" : {
-    "status" : 200,
-    "body" : "{\"code\":404,\"message\":\"not found\"}",
-    "headers" : {
-      "Content-Type" : "application/json"
-    },
+    "status" : 404,
     "transformers" : [ "response-template", "spring-cloud-contract" ]
   },
-  "uuid" : "0981dcec-e9d3-438f-840d-91d4d845c4e9"
+  "uuid" : "419fa1fc-38de-4952-b972-52038542ad9c"
 }

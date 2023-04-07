@@ -1,5 +1,5 @@
 {
-  "id" : "207df446-20e8-42a3-a044-21170b72f6f8",
+  "id" : "eab9a1c8-70b9-4f1f-be06-696ea73034e2",
   "request" : {
     "url" : "/purchases",
     "method" : "POST",
@@ -15,12 +15,8 @@
     } ]
   },
   "response" : {
-    "status" : 200,
-    "body" : "{\"code\":200,\"message\":\"Success\",\"body\":{\"id\":100,\"bidder\":{\"id\":1,\"name\":\"bidder name\"},\"requestPackage\":{\"id\":1,\"content\":\"package content\"}}}",
-    "headers" : {
-      "Content-Type" : "application/json"
-    },
+    "status" : 201,
     "transformers" : [ "response-template", "spring-cloud-contract" ]
   },
-  "uuid" : "207df446-20e8-42a3-a044-21170b72f6f8"
+  "uuid" : "eab9a1c8-70b9-4f1f-be06-696ea73034e2"
 }
